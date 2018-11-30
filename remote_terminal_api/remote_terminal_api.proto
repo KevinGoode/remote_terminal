@@ -1,0 +1,25 @@
+
+
+syntax = "proto3";
+
+//option java_multiple_files = true;
+//option java_package = "io.grpc.examples.helloworld";
+//option java_outer_classname = "HelloWorldProto";
+
+package remote_terminal_api;
+
+// The greeting service definition.
+service RemoteTerminal {
+  // Sends a command
+  rpc ExecuteCommand (CommandRequest) returns (CommandResponse) {}
+}
+
+// The request message .
+message CommandRequest {
+  string cmd = 1;
+}
+
+// The response message
+message CommandResponse {
+  string response = 1;
+}

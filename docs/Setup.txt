@@ -1,0 +1,6 @@
+// Code based on
+https://grpc.io/docs/quickstart/go.html
+Need to install gRPC , protoc and protoc-gen-go as described in this link
+
+//To generate remote_terminal_api.pb.go type the following
+protoc -I remote_terminal_api/ remote_terminal_api/remote_terminal_api.proto --go_out=plugins=grpc:remote_terminal_api
